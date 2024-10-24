@@ -7,8 +7,6 @@ height = 720
 
 frame_height = height/16
 
-part = False
-
 class App():
     def __init__(self):
         self.num_press = 0
@@ -24,7 +22,8 @@ class App():
         self.up_bar.pack(anchor="n")
         self.body = Frame(self.w, background="blue", width=width, height=height-frame_height)
         self.body.pack(anchor="n")
-            
+
+        # Create a post-maker
         def Post():
             
             self.like = 0
@@ -48,7 +47,8 @@ class App():
                 btn.place(x=35, y=85)
                 
                 create_window.mainloop()
-        
+
+        # Render the post in the principal window
         def Create_post():
             self.Name = self.entry1.get()
             self.Color = self.entry2.get()
@@ -77,7 +77,8 @@ class App():
                     
                 title = Label(self.body, text=f"{str(self.Name)}", background="white", font=40)
                 title.place(x=170, y=height/2+25)
-                
+
+        # Put like, Still bug sometimes
         def Like():
             self.like += 1
             num_like = Label(self.body, text=self.like)
