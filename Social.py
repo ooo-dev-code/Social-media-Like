@@ -1,3 +1,5 @@
+# STILL WORKING ON IT, SOME BUGS ARE STILL PRESENT
+
 from tkinter import *
 
 width = 720
